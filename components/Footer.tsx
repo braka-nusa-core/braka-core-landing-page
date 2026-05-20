@@ -3,6 +3,7 @@
 import { useRef } from "react";
 import { motion, useInView } from "framer-motion";
 import { Instagram, Twitter, Linkedin, MessageCircle } from "lucide-react";
+import Image from "next/image";
 
 const EASE = [0.19, 1, 0.22, 1] as const;
 
@@ -45,10 +46,12 @@ export default function Footer() {
                 className="w-6 h-6 bg-accent flex items-center justify-center"
                 style={{ borderRadius: "var(--radius)" }}
               >
-                <img
-                  src="/images/braka-core-logo-white.png" 
-                  alt="Logo" 
-                  className="w-4 h-4 rounded-sm object-cover" 
+                <Image
+                  src="/images/braka-core-logo-white.png"
+                  alt="Logo"
+                  width={16}
+                  height={16}
+                  className="w-4 h-4 rounded-sm object-cover"
                 />
               </div>
               <span className="font-mono text-sm font-medium text-primary-foreground">

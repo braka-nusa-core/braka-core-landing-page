@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X } from "lucide-react";
 import { cn } from "@/lib/utils";
+import Image from "next/image";
 
 const navLinks = [
   { label: "Work",    href: "#work" },
@@ -51,10 +52,12 @@ export default function Navbar() {
           >
             {/* Lime square mark */}
             <div>
-              <img
-              src="/images/braka-core-logo.png" 
-              alt="Logo" 
-              className="w-8 h-8 rounded-sm object-cover transition-transform duration-300 group-hover:scale-110" 
+              <Image
+                src="/images/braka-core-logo.png"
+                alt="Logo"
+                width={32}
+                height={32}
+                className="w-8 h-8 rounded-sm object-cover transition-transform duration-300 group-hover:scale-110"
               />
             </div>
             <span className="font-mono text-sm font-medium tracking-tight text-foreground">
